@@ -18,10 +18,10 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
-		printf("is positive");
+		printf("%lu is positive", n);
 	else if (n < 0)
-		printf("is negative");
+		printf("%lu is negative", n);
 	else
-		printf("is zero");
+		printf("%lu is zero", n);
 	return (0);
 }
