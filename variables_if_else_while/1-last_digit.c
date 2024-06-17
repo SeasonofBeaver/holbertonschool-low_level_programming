@@ -17,12 +17,14 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	if (n > 9)
-		while (n > 9)
-			n = n - 10;
-	else if (n < -9)
-		while (n > 9)
-			n = n - 10;
+	i = n;
+
+	if (i > 9)
+		while (i > 9)
+			i = i - 10;
+	else if (i < -9)
+		while (i > 9)
+			i = i - 10;
 
 	if (i > 5)
 		printf("Last digit of %i is %i and is greater than 5\n", n, i);
