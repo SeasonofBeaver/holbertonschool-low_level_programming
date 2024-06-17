@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-/*
- * int main(void) is the required funtion for every c program
- * puts outputs a specific input
- * and return 0 ends the program
-*/
+/**
+ * main - beginning of program
+ *
+ * Description: outputs "Programming is like building a multilingual puzzle"
+ *
+ * Return: 0 ends the program
+ */
 
 int main(void)
 {
