@@ -24,8 +24,8 @@ int main(void)
 		while (i > 9)
 			i = i - 10;
 	else if (i < -9)
-		while (i > 9)
-			i = i - 10;
+		while (i < -9)
+			i = i + 10;
 
 	if (i > 5)
 		printf("Last digit of %i is %i and is greater than 5\n", n, i);
