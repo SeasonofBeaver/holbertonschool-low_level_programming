@@ -13,7 +13,7 @@ int main(void)
 	int n;
 	n = 0;
 
-	while (n > 10)
+	while (n < 10)
 	{
 		printf("%i", n);
 		n++;
