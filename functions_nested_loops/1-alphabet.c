@@ -2,36 +2,18 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * print_alphabet: prints the alphabet
+ * print_alphabet - check the code
  *
  * Description: print
  *
  * Return: Always 0.
  */
 
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-/**
- * print_alphabet: prints the alphabet
- *
- * Description: print abc
- */
-
 void print_alphabet(void)
 {
-	char text[25] = "abcdefghijklmnopqrstuvwxyz";
-	int n;
+	char letter;
 
-	for (n = 0; n < 26; n++)
-	{
-		_putchar(text[n]);
-	}
+	for (letter = 'a' ; <= 'z' ; letter++)
+		_putchar(letter);
 	_putchar('\n');
-	return (0);
 }
