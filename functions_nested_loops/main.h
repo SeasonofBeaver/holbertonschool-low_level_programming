@@ -8,4 +8,4 @@
  * Return: 0 ends the program
  */
 
-char _putchar(int a);
+char _putchar(char a);
