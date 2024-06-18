@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - begining
+ * _islower - begining
  *
  * Description: print if negative or positive
+ *
+ * @c: is input
  *
  * Return: 0 ends the program
  */
