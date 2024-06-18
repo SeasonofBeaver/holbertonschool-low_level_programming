@@ -8,4 +8,5 @@
  * Return: 0 ends the program
  */
 
-char _putchar(char a);
+int _putchar(char a);
+void print_alphabet(void);
