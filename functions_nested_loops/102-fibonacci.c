@@ -15,13 +15,14 @@ int main(void)
 
 	fib0 = 0;
 	fib1 = 1;
-	for (i = 1 ; i <= 50 ; i++)
+	for (i = 1 ; i < 50 ; i++)
 	{
 		fibNow = fib0 + fib1;
 		printf("%li, ", fibNow);
 		fib0 = fib1;
 		fib1 = fibNow;
 	}
-	putchar('\n');
+	fibNow = fib0 + fib1;
+	printf("%li\n", fibNow);
 	return (0);
 }
