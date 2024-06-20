@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	int fib0, fib1, fibNow, i;
+	int i;
+	long int fib0, fib1, fibNow;
 
 	fib0 = 0;
 	fib1 = 1;
