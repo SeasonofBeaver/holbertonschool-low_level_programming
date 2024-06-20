@@ -21,6 +21,6 @@ int main(void)
 		fib0 = fib1;
 		fib1 = fibNow;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
