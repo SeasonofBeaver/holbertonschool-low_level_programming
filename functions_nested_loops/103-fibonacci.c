@@ -16,7 +16,7 @@ int main(void)
 	fib1 = 1;
 	fibNow = 1;
 	fibSum = 0;
-	while (fibNow >= 4000000)
+	while (fibNow <= 4000000)
 	{
 		fibNow = fib0 + fib1;
 		fib0 = fib1;
