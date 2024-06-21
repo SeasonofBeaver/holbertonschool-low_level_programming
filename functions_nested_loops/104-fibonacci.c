@@ -12,7 +12,7 @@ int main(void)
 {
 	int i;
 	unsigned long int fib0, fib1, fibNow;
-	float fibLast;
+	long double fibLast;
 
 	fib0 = 0;
 	fib1 = 1;
@@ -24,6 +24,6 @@ int main(void)
 		fib1 = fibNow;
 	}
 	fibLast = fib0 + fib1;
-	printf("%f\n", fibLast);
+	printf("%lf\n", fibLast);
 	return (0);
 }
