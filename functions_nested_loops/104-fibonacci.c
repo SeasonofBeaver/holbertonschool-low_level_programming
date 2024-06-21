@@ -25,6 +25,6 @@ int main(void)
 	fibNow = ((fib0 / 11) + (fib1 / 11));
 	printf("%lu", fibNow);
 	fibNow = ((fib0 % 11) + (fib1 % 11));
-	printf("%lu\n", fibNow;
+	printf("%lu\n", fibNow);
 	return (0);
 }
