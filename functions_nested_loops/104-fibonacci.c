@@ -11,18 +11,18 @@
 int main(void)
 {
 	int i;
-	double fib0, fib1, fibNow;
+	unsigned long int fib0, fib1, fibNow;
 
 	fib0 = 0;
 	fib1 = 1;
 	for (i = 1 ; i < 98 ; i++)
 	{
 		fibNow = fib0 + fib1;
-		printf("%lf, ", fibNow);
+		printf("%lu, ", fibNow);
 		fib0 = fib1;
 		fib1 = fibNow;
 	}
 	fibNow = fib0 + fib1;
-	printf("%lf\n", fibNow);
+	printf("%lu\n", fibNow);
 	return (0);
 }
