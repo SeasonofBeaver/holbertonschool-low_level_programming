@@ -24,6 +24,6 @@ int main(void)
 		fib1 = fibNow;
 	}
 	fibLast = fib0 + fib1;
-	printf("%lf\n", fibLast);
+	printf("%Lf\n", fibLast);
 	return (0);
 }
