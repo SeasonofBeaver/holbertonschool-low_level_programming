@@ -12,7 +12,6 @@ int main(void)
 {
 	int i;
 	unsigned long int fib0, fib1, fibNow;
-	long double fibLast;
 
 	fib0 = 0;
 	fib1 = 1;
@@ -23,7 +22,9 @@ int main(void)
 		fib0 = fib1;
 		fib1 = fibNow;
 	}
-	fibLast = fib0 + fib1;
-	printf("%Lf\n", fibLast);
+	fibNow = ((fib0 / 11) + (fib1 / 11));
+	printf("%lu", fibNow);
+	fibNow = ((fib0 % 11) + (fib1 % 11));
+	printf("%lu\n", fibNow;
 	return (0);
 }
