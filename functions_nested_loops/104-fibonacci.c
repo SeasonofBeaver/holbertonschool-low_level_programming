@@ -1,52 +1,52 @@
 #include <stdio.h>
 
 /**
- * main - begining
+ * main - Prints the first 98 Fibonacci numbers, starting with
+ *        1 and 2, separated by a comma followed by a space.
  *
- * Description: print if negative or positive
- *
- * Return: 0 ends the program
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int i;
-	unsigned long int fib0, fib1, fibNow, fibFirstHalf, fibSecondHalf;
-	unsigned long int fib0first, fib0second, fib1first, fib1second;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, fibSum;
+	unsigned long fib1Half1, fib1Half2, fib2Half1, fib2Half2;
+	unsigned long half1, half2;
 
-	fib0 = 0;
-	fib1 = 1;
-	for (i = 1 ; i < 99 ; i++)
+	for (count = 1; count <= 92; count++)
 	{
-		if ((fib1 + fib0) < 10000000000)
+		fibSum = fib1 + fib2;
+		printf("%lu, ", fibSum);
+
+		fib1 = fib2;
+		fib2 = fibSum;
+	}
+
+	fib1Half1 = fib1 / 10000000000;
+	fib2Half1 = fib2 / 10000000000;
+	fib1Half2 = fib1 % 10000000000;
+	fib2Half2 = fib2 % 10000000000;
+
+	for (count = 93; count <= 98; count++)
+	{
+		half1 = fib1Half1 + fib2Half1;
+		half2 = fib1Half2 + fib2Half2;
+		if (fib1Half2 + fib2Half2 > 9999999999)
 		{
-			fibNow = fib0 + fib1;
-			printf("%lu", fibNow);
-			fib0 = fib1;
-			fib1 = fibNow;
-			fib0first = fib0 / 10000000000;
-			fib0second = fib0 % 10000000000;
-			fib1first = fib1 / 10000000000;
-			fib1second = fib1 % 10000000000;
+			half1++;
+			half2 %= 10000000000;
 		}
-		else
-		{
-			fibFirstHalf = ((fib0first) + (fib1first));
-			fibSecondHalf = ((fib0second) + (fib1second));
-			printf("%lu%lu", fibFirstHalf, fibSecondHalf);
-			fib0first = fib1first;
-			fib1first = fibFirstHalf;
-			fib0second = fib1second;
-			fib1second = fibSecondHalf;
-		}
-		if (i < 98)
+
+		printf("%lu%lu", half1, half2);
+		if (count != 98)
 			printf(", ");
 		else
 			printf("\n");
+
+		fib1Half1 = fib2Half1;
+		fib1Half2 = fib2Half2;
+		fib2Half1 = half1;
+		fib2Half2 = half2;
 	}
-	fibNow = ((fib0 / 11) + (fib1 / 11));
-	printf("%lu", fibNow);
-	fibNow = ((fib0 % 11) + (fib1 % 11));
-	printf("%lu\n", fibNow);
 	return (0);
 }
