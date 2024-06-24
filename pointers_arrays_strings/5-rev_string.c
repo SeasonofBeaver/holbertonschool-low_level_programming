@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_rev - check the code
+ * rev_string - check the code
  *
  * Description: print
  *
@@ -11,7 +11,7 @@
  * Return: Always 0.
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int i, length;
 
