@@ -14,7 +14,7 @@
 int _atoi(char *s)
 {
 	int number = 0;
-	bool negative = false;
+	int negative = 0;
 	int i, length;
 
 	length = 0;
@@ -25,16 +25,16 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 		{
-			if (negative)
-				negative = false;
+			if (negative == 1)
+				negative = 0;
 			else
-				negative = true;
+				negative = 1;
 		}
-		else if ((s[i] >= '0') && (s[i] <= '9')
+		else if ((s[i] >= '0') && (s[i] <= '9'))
 			number = (number * 10) + str[i] + '0';
 	}
-	if (negative)
-		number *= -1
+	if (negative == 1)
+		number *= -1;
 
 	return (number);
 }
