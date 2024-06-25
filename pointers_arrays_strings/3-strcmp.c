@@ -21,9 +21,9 @@ int _strcmp(char *s1, char *s2)
 	lengthS1 = 0;
 	lengthS2 = 0;
 	for (i = 0 ; s1[i] != '\0' ; i++)
-		lengthS1++
+		lengthS1++;
 	for (i = 0 ; s2[i] != '\0' ; i++)
-		lengthS2++
+		lengthS2++;
 	for (i = 0 ; s1[i] != '\0' ; i++)
 	{
 		if (s1[i] != s2[i])
@@ -31,6 +31,5 @@ int _strcmp(char *s1, char *s2)
 			compare = lengthS1 - lengthS2;
 		}
 	}
-
 	return (compare);
 }
