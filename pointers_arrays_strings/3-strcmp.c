@@ -27,10 +27,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] != s2[i])
 		{
-			if (lengthS1 > lengthS2)
-				return (lengthS1);
-			else
-				return (lengthS2);
+			return (s1[i] - s2[i]);
 		}
 	}
 	return (0);
