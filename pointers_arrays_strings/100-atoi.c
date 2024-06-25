@@ -14,6 +14,7 @@
 int _atoi(char *s)
 {
 	int number = 0;
+	int rightHalf = 0;
 	int negative = 0;
 	int i, length;
 
@@ -31,10 +32,17 @@ int _atoi(char *s)
 				negative = 1;
 		}
 		else if ((s[i] >= '0') && (s[i] <= '9'))
-			number = (number * 10) + s[i] - '0';
+		{
+			if (number < 100000000)
+				number = (number * 10) + s[i] - '0';
+			else
+				rightHalf = (rightHalf * 10) + s[i] - '0';
+		}
 	}
 	if (negative == 1)
 		number *= -1;
-
-	return (number);
+	if (rightHalf == 0)
+		return (number);
+	else
+		return (number + rightHalf);
 }
