@@ -31,7 +31,7 @@ int _atoi(char *s)
 				negative = 1;
 		}
 		else if ((s[i] >= '0') && (s[i] <= '9'))
-			number = (number * 10) + s[i] + '0';
+			number = (number * 10) + s[i] - '0';
 	}
 	if (negative == 1)
 		number *= -1;
