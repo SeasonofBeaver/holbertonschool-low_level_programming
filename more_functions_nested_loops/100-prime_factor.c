@@ -13,7 +13,7 @@ int main(void)
 	long int number = 612852475143;
 	long int i, largestPrimeFactor;
 
-	i = 2;
+	i = 0;
 	largestPrimeFactor = 0;
 	while (i <= (number / 2))
 	{
@@ -22,7 +22,7 @@ int main(void)
 			number = number / i;
 			if (largestPrimeFactor < i)
 				largestPrimeFactor = i;
-			i = 1;
+			i = 0;
 		}
 		i++;
 	}
