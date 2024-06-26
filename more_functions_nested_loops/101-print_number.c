@@ -30,5 +30,5 @@ void print_number(int n)
 		divide = 1;
 		_putchar(numRN + 48);
 	}
-	_putchar('\n');
+	_putchar(10);
 }
