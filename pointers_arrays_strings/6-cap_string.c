@@ -33,6 +33,8 @@ char *cap_string(char *s)
 			nextLetterCap = 1;
 		else if (s[i] == '(')
 			nextLetterCap = 1;
+		else
+			nextLetterCap = 0;
 	}
 	return (s);
 }
