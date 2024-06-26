@@ -14,6 +14,7 @@ int main(void)
 	long int i, largestPrimeFactor;
 
 	i = 2;
+	largestPrimeFactor = 0;
 	while (i <= (number / 2))
 	{
 		if ((number % i) == 0)
