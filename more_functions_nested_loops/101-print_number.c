@@ -26,6 +26,7 @@ void print_number(int n)
 			divide = divide * 10;
 		numRN = i / divide;
 		divide = 1;
+		lenNum--;
 		print = numRN + 48;
 		_putchar(print);
 	}
