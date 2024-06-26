@@ -25,6 +25,6 @@ int main(void)
 		i++;
 	}
 	largestPrimeFactor = number;
-	printf("%li", largestPrimeFactor);
+	printf("%li\n", largestPrimeFactor);
 	return (0);
 }
