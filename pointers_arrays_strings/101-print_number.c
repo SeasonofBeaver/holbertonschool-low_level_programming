@@ -39,7 +39,7 @@ void print_number(int n)
 			divide = divide * 10;
 		numRN = i / divide;
 		lenNum--;
-		if (i > 10)
+		if (i >= 10)
 			_putchar('0' + numRN);
 	}
 	if (k == 1)
