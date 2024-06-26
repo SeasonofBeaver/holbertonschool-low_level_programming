@@ -13,26 +13,13 @@
 
 void print_number(int n)
 {
-	int i, j, numRN, lenNum, divide;
-
-	lenNum = 0;
-	divide = 1;
-	printf("%i", n);
 	if (n < 0)
 	{
-		putchar('-');
-		n *= -1;
+		_putchar('-');
+		n = -n;
 	}
-	for (i = n ; i > 0 ; i /= 10)
-		lenNum++;
-	lenNum--;
-	for (i = n ; i > 0 ; i %= divide)
-	{
-		divide = 1;
-		for (j = 0 ; j < lenNum ; j++)
-			divide = divide * 10;
-		numRN = i / divide;
-		lenNum--;
-		putchar(numRN + '0');
-	}
+
+	if (n > 9)
+		print_number(n / 10);
+	putc('0' + (n % 10));
 }
