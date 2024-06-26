@@ -24,4 +24,5 @@ char *rot13(char *s)
 				s[i] = s[i] - 26;
 		}
 	}
+	return (s);
 }
