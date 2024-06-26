@@ -19,7 +19,7 @@ void print_number(int n)
 	divide = 1;
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		n *= -1;
 	}
 	for (i = n ; i > 0 ; i /= 10)
@@ -32,6 +32,6 @@ void print_number(int n)
 			divide = divide * 10;
 		numRN = i / divide;
 		lenNum--;
-		_putchar(numRN + '0');
+		putchar(numRN + '0');
 	}
 }
