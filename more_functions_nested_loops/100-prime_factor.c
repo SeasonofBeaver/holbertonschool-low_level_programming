@@ -13,19 +13,18 @@ int main(void)
 	long int number = 612852475143;
 	long int i, largestPrimeFactor;
 
-	i = 1;
+	i = 2;
 	largestPrimeFactor = 0;
 	while (i <= (number / 2))
 	{
 		if ((number % i) == 0)
 		{
 			number = number / i;
-			if (largestPrimeFactor < i)
-				largestPrimeFactor = i;
-			i = 0;
+			i = 1;
 		}
 		i++;
 	}
+	largestPrimeFactor = number;
 	printf("%li", largestPrimeFactor);
 	return (0);
 }
