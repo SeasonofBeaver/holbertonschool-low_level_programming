@@ -17,6 +17,7 @@ void print_number(int n)
 
 	lenNum = 0;
 	divide = 1;
+	printf("%i", n);
 	if (n < 0)
 	{
 		putchar('-');
