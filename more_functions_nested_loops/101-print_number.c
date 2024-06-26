@@ -13,10 +13,15 @@
 
 void print_number(int n)
 {
-	int i, j, numRN, lenNum, divide, print;
+	int i, j, numRN, lenNum, divide;
 
 	lenNum = 0;
 	divide = 1;
+	if (n < 0)
+	{
+		_putchar('-');
+		n *= -1;
+	}
 	for (i = n ; i > 0 ; i /= 10)
 		lenNum++;
 	lenNum--;
@@ -27,7 +32,6 @@ void print_number(int n)
 			divide = divide * 10;
 		numRN = i / divide;
 		lenNum--;
-		print = numRN + 48;
-		_putchar(print);
+		_putchar(numRN + '0');
 	}
 }
