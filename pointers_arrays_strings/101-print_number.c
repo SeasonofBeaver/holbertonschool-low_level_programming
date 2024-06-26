@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "mainadvanced.h"
+#include "main.h"
 
 /**
  * print_number - check the code
