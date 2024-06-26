@@ -46,5 +46,4 @@ void print_number(int n)
 		_putchar('0' + (numRN + 1));
 	else
 		_putchar('0' + numRN);
-	return (0);
 }
