@@ -21,7 +21,7 @@ void print_number(int n)
 		lenNum++;
 	lenNum--;
 	if (n < 0)
-		_putchar('-');
+		_putchar(45);
 	for (i = n ; i > 0 ; i /= 10)
 	{
 		for (j = 0 ; j < lenNum ; j++)
