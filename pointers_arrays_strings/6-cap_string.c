@@ -6,33 +6,33 @@
  *
  * Description: print
  *
- * @str: input
+ * @s: input
  *
  * Return: Always 0.
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
 	int i, nextLetterCap;
 
 	nextLetterCap = 1;
-	for (i = 0 ; str[i] != '\0' ; i++)
+	for (i = 0 ; s[i] != '\0' ; i++)
 	{
-		if ((str[i] >= 'a') && (str[i] <= 'z') && (nextLetterCap == 1))
+		if ((s[i] >= 'a') && (s[i] <= 'z') && (nextLetterCap == 1))
 		{
-			str[i] = str[i] - 32;
+			s[i] = s[i] - 32;
 			nextLetterCap = 0;
 		}
-		else if ((str[i] >= 'A') && (str[i] <= 'Z') && (nextLetterCap == 1))
+		else if ((s[i] >= 'A') && (s[i] <= 'Z') && (nextLetterCap == 1))
 			nextLetterCap = 0;
-		else if ((str == ' ') || (str == '	') || (str == '\n') || (str == ','))
+		else if ((s[i] == ' ') || (s[i] == '	') || (s[i] == '\n') || (s[i] == ','))
 			nextLetterCap = 1;
-		else if ((str == '.') || (str == '!') || (str == '?') || (str == '"'))
+		else if ((s[i] == '.') || (s[i] == '!') || (s[i] == '?') || (s[i] == '"'))
 			nextLetterCap = 1;
-		else if ((str == '{') || (str == '}') || (str == ';') || (str == ')'))
+		else if ((s[i] == '{') || (s[i] == '}') || (s[i] == ';') || (s[i] == ')'))
 			nextLetterCap = 1;
-		else if (str == '(')
+		else if (s[i] == '(')
 			nextLetterCap = 1;
 	}
-	return (str);
+	return (s);
 }
