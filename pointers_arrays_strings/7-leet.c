@@ -13,7 +13,7 @@
 
 char *leet(char *s)
 {
-	char letters[] = {a, e, o, t, l};
+	char letters[] = {'a', 'e', 'o', 't', 'l'};
 	char leet[] = {'4', '3', '0', '7', '1'};
 	int i, j;
 
