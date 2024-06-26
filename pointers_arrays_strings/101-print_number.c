@@ -44,6 +44,8 @@ void print_number(int n)
 	}
 	if (k == 1)
 		_putchar('0' + (numRN + 1));
+	else if ((n % 10) == 0)
+		_putchar('0' + (n % 10));
 	else
 		_putchar('0' + numRN);
 }
