@@ -15,10 +15,10 @@ void print_number(int n)
 {
 	int i, j, numRN, lenNum, divide;
 
-	lenNum
+	lenNum = 0;
 	for (i = n ; i > 0 ; i /= 10)
-		lenNum++
-	lenNum--
+		lenNum++;
+	lenNum--;
 	if (n < 0)
 		_putchar('-');
 	for (i = n ; i > 0 ; i /= 10)
