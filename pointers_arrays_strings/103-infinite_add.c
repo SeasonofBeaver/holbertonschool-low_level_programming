@@ -31,8 +31,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	lenN2--;
 	for (i = size_r - 1 ; i >= 0 ; i--, lenN1--, lenN2--)
 	{
-		if ((lenN1 < -1) && (lenN2 < -1) && (carry == 0))
-			break;
 		if (n1[lenN1] + n2[lenN2] + carry <= 9)
 		{
 			r[i] = n1[lenN1] + n2[lenN2] + carry - '0';
