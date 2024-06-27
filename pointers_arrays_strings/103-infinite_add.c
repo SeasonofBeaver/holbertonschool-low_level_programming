@@ -49,6 +49,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			carry = 1;
 		}
 	}
+	r[i] = '\0';
 	if (lenN1 >= 0 || lenN2 >= 0 || carry > 0)
 		return (0);
 	for (i--, j = 0; j < i; i--, j++)
