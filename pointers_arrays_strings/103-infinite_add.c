@@ -19,7 +19,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, temp, carry = 0, lenN1 = 0, lenN2 = 0, lenR = 0, sum;
+	int i, j, k, temp, carry = 0, lenN1 = 0, lenN2 = 0, lenR = 0, sum;
 
 	for (i = 0 ; n1[i] != '\0' ; i++)
 		lenN1++;
@@ -52,7 +52,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	r[i] = '\0';
 	if (lenN1 >= 0 || lenN2 >= 0 || carry > 0)
 		return (0);
-	for (i = 0 ; n1[i] != '\0' ; i++)
+	for (k = 0 ; r[k] != '\0' ; k++)
                 lenR++;
 	if (lenR >= size_r)
 		return(0);
