@@ -33,16 +33,16 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		if (n1[i] + n2[i] + carry <= 9)
 		{
-			r[i] = n1[i] + n2[i] + carry;
+			*r[i] = n1[i] + n2[i] + carry;
 			carry = 0;
 		}
 		else
 		{
-			r[i] = (n1[i] + n2[i]) % 10;
+			*r[i] = (n1[i] + n2[i]) % 10;
 			carry = 1;
 		}
 		if (size_r <= length)
-			r = 0;
+			*r = 0;
 	}
 	return (r);
 }
