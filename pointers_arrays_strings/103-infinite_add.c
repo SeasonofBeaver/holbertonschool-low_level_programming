@@ -36,14 +36,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			sum += n1[lenN1] - '0';
 		if (lenN2 >= 0)
 			sum += n2[lenN2] - '0';
-		if (n + carry <= 9)
+		if (sum + carry <= 9)
 		{
-			r[i] = n + carry + '0';
+			r[i] = sum + carry + '0';
 			carry = 0;
 		}
 		else
 		{
-			r[i] = ((n + carry) % 10 + '0');
+			r[i] = ((sum + carry) % 10 + '0');
 			carry = 1;
 		}
 	}
