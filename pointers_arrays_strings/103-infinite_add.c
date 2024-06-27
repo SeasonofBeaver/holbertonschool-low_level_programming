@@ -19,7 +19,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, carry = 0, lenN1 = 0, lenN2 = 0, length;
+	int i, carry = 0, lenN1 = 0, lenN2 = 0;
 
 	for (i = 0 ; n1[i] != '0' ; i++)
 		lenN1++;
@@ -36,7 +36,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		else
 		{
-			r[i] = (n1[i] + n2[i]) % 10 + '0');
+			r[i] = ((n1[i] + n2[i]) % 10 + '0');
 			carry = 1;
 		}
 	}
