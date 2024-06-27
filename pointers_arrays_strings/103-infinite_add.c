@@ -25,24 +25,20 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		lenN1++;
 	for (i = 0 ; n1[i] != '0' ; i++)
 		lenN2++;
-	if (lenN1 > lenN2)
-		length = lenN1;
-	else
-		length = lenN2;
-	for (i = length - 1 ; i >= 0 ; i--)
+	if ((lenN1 > size_r) || (lenN2 > size_r))
+		return (0);
+	for (i = size_r - 1 ; i >= 0 ; i--)
 	{
 		if (n1[i] + n2[i] + carry <= 9)
 		{
-			*r[i] = n1[i] + n2[i] + carry;
+			r[i] = n1[i] + n2[i] + carry + '0';
 			carry = 0;
 		}
 		else
 		{
-			*r[i] = (n1[i] + n2[i]) % 10;
+			r[i] = (n1[i] + n2[i]) % 10 + '0');
 			carry = 1;
 		}
-		if (size_r <= length)
-			*r = 0;
 	}
 	return (r);
 }
