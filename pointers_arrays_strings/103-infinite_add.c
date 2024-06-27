@@ -35,12 +35,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			break;
 		if (n1[lenN1] + n2[lenN2] + carry <= 9)
 		{
-			r[i] = n1[lenN1] + n2[lenN2] + carry + '0';
+			r[i] = n1[lenN1] + n2[lenN2] + carry - '0';
 			carry = 0;
 		}
 		else
 		{
-			r[i] = ((n1[lenN1] + n2[lenN2]) % 10 + '0');
+			r[i] = ((n1[lenN1] + n2[lenN2]) % 10 - '0');
 			carry = 1;
 		}
 	}
