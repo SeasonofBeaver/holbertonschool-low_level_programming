@@ -19,17 +19,13 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, temp, carry = 0, lenN1 = 0, lenN2 = 0, lenR = 0, sum;
+	int i, j, k, temp, carry = 0, lenN1, lenN2, lenR = 0, sum;
 
-	for (i = 0 ; n1[i] != '\0' ; i++)
-		lenN1++;
-	for (i = 0 ; n2[i] != '\0' ; i++)
-		lenN2++;
+	for (lenN1 = 0 ; n1[lenN1] != '\0' ; lenN1++)
+	for (lenN2 = 0 ; n2[lenN2] != '\0' ; lenN2++)
 	if ((lenN1 >= size_r) || (lenN2 >= size_r))
 		return (0);
-	lenN1--;
-	lenN2--;
-	for (i = 0 ; i < size_r ; i++, lenN1--, lenN2--)
+	for (i = 0, lenN1--, lenN2-- ; i < size_r ; i++, lenN1--, lenN2--)
 	{
 		if ((lenN1 < 0) && (lenN2 < 0) && (carry == 0))
 			break;
@@ -53,9 +49,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (lenN1 >= 0 || lenN2 >= 0 || carry > 0)
 		return (0);
 	for (k = 0 ; r[k] != '\0' ; k++)
-                lenR++;
+		lenR++;
 	if (lenR >= size_r)
-		return(0);
+		return (0);
 	for (i--, j = 0; j < i; i--, j++)
 	{
 		temp = r[i];
