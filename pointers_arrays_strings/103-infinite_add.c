@@ -19,7 +19,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, carry = 0, lenN1 = 0, lenN2 = 0;
+	int i, carry = 0, lenN1 = 0, lenN2 = 0, sum;
 
 	for (i = 0 ; n1[i] != '\0' ; i++)
 		lenN1++;
@@ -31,14 +31,19 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	lenN2--;
 	for (i = size_r - 1 ; i >= 0 ; i--, lenN1--, lenN2--)
 	{
-		if (n1[lenN1] + n2[lenN2] + carry <= 9)
+		sum = 0;
+		if (lenN1 >= 0)
+			sum += n1[lenN1] - '0';
+		if (lenN2 >= 0)
+			sum += n2[lenN2] - '0';
+		if (n + carry <= 9)
 		{
-			r[i] = n1[lenN1] + n2[lenN2] + carry - '0';
+			r[i] = n + carry + '0';
 			carry = 0;
 		}
 		else
 		{
-			r[i] = ((n1[lenN1] + n2[lenN2]) % 10 - '0');
+			r[i] = ((n + carry) % 10 + '0');
 			carry = 1;
 		}
 	}
