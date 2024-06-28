@@ -25,7 +25,10 @@ void print_number(int n)
 	if (n > 9)
 		print_number(n / 10);
 	if (i > 0)
+	{
 		_putchar('0' + ((n + 1) % 10));
+		i--;
+	}
 	else
 		_putchar('0' + (n % 10));
 }
