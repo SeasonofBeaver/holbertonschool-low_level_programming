@@ -39,9 +39,9 @@ void print_buffer(char *b, int size)
 					else
 					{
 						if (j % 2 == 1)
-							printf("%x ", b[j]);
+							printf("%02x ", b[j]);
 						else
-							printf("%x", b[j]);
+							printf("%02x", b[j]);
 					}
 				}
 
