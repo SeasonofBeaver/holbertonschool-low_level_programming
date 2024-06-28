@@ -27,7 +27,7 @@ void print_buffer(char *b, int size)
 				if (i != 0)
 					printf("\n");
 				byte = b[i] & 0xFF;
-				printf("%i: ", byte
+				printf("%i: ", byte);
 			}
 			if (isprint(b[i]) != 0)
 				printf("%c", b[i]);
