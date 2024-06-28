@@ -26,7 +26,7 @@ void print_buffer(char *b, int size)
 			{
 				if (i != 0)
 					printf("\n");
-				printf("0%04X: ", b[i]);
+				printf("%08i: ", b[i]);
 				for (j = i ; j < i + 10 ; j++)
 				{
 					if (j >= size)
