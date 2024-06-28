@@ -26,8 +26,8 @@ void print_buffer(char *b, int size)
 			{
 				if (i != 0)
 					printf("\n");
-				byte = b[i] & 0xFF;
-				printf("%i: ", byte);
+				byte = hexdump(b[i]);
+				printf("0%i: ", byte);
 				for (j = i ; j < i + 10 ; j++)
 				{
 					if (j >= size)
