@@ -28,7 +28,7 @@ void print_buffer(char *b, int size)
 					printf("\n");
 				byte = b[i] & 0xFF;
 				printf("%i: ", byte);
-				for (j = i ; j < i + 10, j < size ; j++)
+				for (j = i ; (j < i + 10) & (j < size) ; j++)
 				{
 					if (j % 2 == 1)
 						printf("%x ", b[j]);
