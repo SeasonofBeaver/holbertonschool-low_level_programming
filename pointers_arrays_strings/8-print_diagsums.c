@@ -15,18 +15,16 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j, sum;
+	int i, sum, length;
 
 	sum = 0;
-	for (i = 0 ; i < size ; i++)
-		sum += a[i][i];
+	for (length = 0 ; a[length] != '\0' ; length++)
+	;
+	for (i = 0 ; i < length ; i += (size + 1))
+		sum += a[i];
 	printf("%i, ", sum);
 	sum = 0;
-	j = 0;
-	for (i = size - 1 ; i >= 0 ; i--)
-	{
-		sum += a[j][i];
-		j++
-	}
+	for (i = size - 1 ; i < length ; i += (size - 1))
+		sum += a[i];
 	printf("%i\n", sum);
 }
