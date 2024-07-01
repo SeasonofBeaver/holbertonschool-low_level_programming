@@ -24,7 +24,7 @@ void print_diagsums(int *a, int size)
 		sum += a[i];
 	printf("%i, ", sum);
 	sum = 0;
-	for (i = (size - 1) ; i < length - 2 ; i += (size - 1)
+	for (i = (size - 1) ; i < length - 2 ; i += (size - 1))
 		sum += a[i];
 	printf("%i\n", sum);
 }
