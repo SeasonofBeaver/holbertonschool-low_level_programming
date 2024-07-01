@@ -1,18 +1,22 @@
 #include "main.h"
 
 /**
- * reset_to_98 - check the code
+ * _memcpy - check the code
  *
  * Description: print
  *
- * @n: input
+ * @dest: input destination
+ *
+ * @src: input source
+ *
+ * @n: input length
  *
  * Return: Always 0.
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i; 
+	unsigned int i;
 
 	for (i = 0 ; i < n ; i++)
 	{
