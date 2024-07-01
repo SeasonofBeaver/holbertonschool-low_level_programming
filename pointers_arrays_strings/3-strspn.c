@@ -22,13 +22,13 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				if (stillGoing != j-1)
+				if (stillGoing != i-1)
 				{
 					if (newLength > length)
 						length = newLength;
 					newLength = 0;
 				}
-				stillGoing = j;
+				stillGoing = i;
 				newLength++;
 				break;
 			}
