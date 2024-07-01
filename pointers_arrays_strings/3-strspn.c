@@ -14,8 +14,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, length = 0, newLength = 0;
-	int stillGoing = 0;
+	unsigned int i, j, length = 0, newLength = 0, stillGoing = 0;
 
 	for (i = 0 ; s[i] != '\0' ; i++)
 	{
@@ -30,7 +29,7 @@ unsigned int _strspn(char *s, char *accept)
 					newLength = 0;
 				}
 				stillGoing = j;
-				newlength++;
+				newLength++;
 				break;
 			}
 		}	
