@@ -12,14 +12,14 @@
 
 int square_root_finder(int square, int number)
 {
-        if (square * square == number)
-                return (square);
-        else if (square * square > number)
-        {
-                return (-1);
-        }
-        else
-                return (square_root_finder(square + 1, number));
+	if (square * square == number)
+		return (square);
+	else if (square * square > number)
+	{
+		return (-1);
+	}
+	else
+		return (square_root_finder(square + 1, number));
 }
 
 /**
