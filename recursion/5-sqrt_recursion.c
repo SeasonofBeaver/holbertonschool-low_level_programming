@@ -36,5 +36,5 @@ int square_root_finder(int square, int number)
 		return (-1);
 	}
 	else
-		square_root_finder(square + 1, number);
+		return (square_root_finder(square + 1, number));
 }
