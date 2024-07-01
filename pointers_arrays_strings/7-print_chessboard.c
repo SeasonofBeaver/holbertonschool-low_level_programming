@@ -5,7 +5,7 @@
  *
  * Description: print
  *
- * @a[8]: input memory area
+ * @a: input memory area
  *
  * Return: Always 0.
  */
