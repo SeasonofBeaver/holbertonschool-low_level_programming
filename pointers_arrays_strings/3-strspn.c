@@ -14,15 +14,26 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, length = 0;
+	unsigned int i, j, length = 0, newLength = 0;
+	int stillGoing = 0;
 
 	for (i = 0 ; s[i] != '\0' ; i++)
 	{
 		for (j = 0 ; accept[j] != '\0' ; j++)
 		{
 			if (s[i] == accept[j])
-				length++;
-		}
+			{
+				if (stillGoing != j-1)
+				{
+					if (newLength > length)
+						length = newLength;
+					newLength = 0;
+				}
+				stillGoing = j;
+				newlength++;
+				break;
+			}
+		}	
 	}
 	return (length);
 }
