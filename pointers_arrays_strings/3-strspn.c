@@ -14,11 +14,11 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, length = 0, newLength = 0, stillGoing = 0;
+	unsigned int i, j, further = 0, length = 0, newLength = 0, stillGoing = 0;
 
 	for (i = 0 ; s[i] != '\0' ; i++)
 	{
-		for (j = 0 ; accept[j] != '\0' ; j++)
+		for (j = further ; accept[j] != '\0' ; j++)
 		{
 			if (s[i] == accept[j])
 			{
@@ -27,9 +27,11 @@ unsigned int _strspn(char *s, char *accept)
 					if (newLength > length)
 						length = newLength;
 					newLength = 0;
+					further = 0;
 				}
 				stillGoing = i;
 				newLength++;
+				further = j;
 				break;
 			}
 		}	
