@@ -35,5 +35,7 @@ int prime_finder(int prime, int check)
 
 int is_prime_number(int n)
 {
+	if (n < 2)
+		return (0);
 	return (prime_finder(n, 2));
 }
