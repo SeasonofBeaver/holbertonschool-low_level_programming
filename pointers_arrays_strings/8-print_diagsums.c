@@ -18,8 +18,7 @@ void print_diagsums(int *a, int size)
 	int i, sum, length;
 
 	sum = 0;
-	for (length = 0 ; a[length] != '\0' ; length++)
-	;
+	length = size * size;
 	for (i = 0 ; i < length ; i += (size + 1))
 		sum += a[i];
 	printf("%i, ", sum);
