@@ -23,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j])
 			{
 				further = j;
-				if (stillGoing != i-1)
+				if (stillGoing != i - 1)
 				{
 					if (newLength > length)
 						length = newLength;
@@ -34,7 +34,7 @@ unsigned int _strspn(char *s, char *accept)
 				newLength++;
 				break;
 			}
-		}	
+		}
 	}
 	return (length);
 }
