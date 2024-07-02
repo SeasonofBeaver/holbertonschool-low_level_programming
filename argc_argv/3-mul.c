@@ -17,7 +17,7 @@
 
 int main(int argc, char **argv)
 {
-	int sum, firstNum, secondNum;
+	int sum;
 
 	(void) argc;
 	if ((atoi(argv[1]) > 0) || (atoi(argv[1]) <= 0))
