@@ -13,7 +13,7 @@
  * Return: 0 ends the program
  */
 
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
 	(void) argc;
 	printf("%d", argv[0]);
