@@ -1,15 +1,12 @@
 #include "main.h"
 
-char reverse_string(char *string)
+char *reverse_string(char *string)
 {
-	if (s[0] == '\0')
+	if (string[0] == '\0')
 	{
-		return;
+		return (string[0]);
 	}
-	else
-	{
-		return (reverse_string(string + 1) + string[0]);
-	}
+	return (reverse_string(string + 1) + string[0]);
 }
 
 int testIfPalindrom(char *str, char *empty)
@@ -32,7 +29,7 @@ int testIfPalindrom(char *str, char *empty)
 
 int is_palindrome(char *s)
 {
-	if (testIfPalindrom(s, []) == 1)
+	if (testIfPalindrom(s, s) == 1)
 		return (1);
 	return (0);
 }
