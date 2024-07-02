@@ -14,7 +14,7 @@ int lengthString(char *s)
 {
 	if (s[0] == '\0')
 		return (0);
-	return (1 + lengthString(s + 1);
+	return (1 + lengthString(s + 1));
 }
 
 /**
