@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	int sum;
 
 	(void) argc;
-	if ((isdigit(atoi(argv[1]))) && (isdigit(atoi(argv[2]))))
+	if ((isalnum(atoi(argv[1]))) && (isalnum(atoi(argv[2]))))
 	{
 		sum = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", sum);
