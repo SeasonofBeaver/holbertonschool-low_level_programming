@@ -4,7 +4,7 @@ char *reverse_string(char *string)
 {
 	if (string[0] == '\0')
 	{
-		return (string[0]);
+		return (string);
 	}
 	return (reverse_string(string + 1) + string[0]);
 }
