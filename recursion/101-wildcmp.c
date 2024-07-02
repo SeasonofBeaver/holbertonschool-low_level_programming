@@ -20,7 +20,7 @@ int isIdentical(char *String1, char *String2)
 {
 	if ((String1[0] == '\0') && (String2[0] == '\0'))
 		return (1);
-	else if (String1[0] != String2[0])
+	else if ((String1[0] == '\0') || (String2[0] == '\0'))
 		return (0);
 	else if (String2[0] != '*')
 		return (isIdentical(String1 + 1, String2 + 1));
