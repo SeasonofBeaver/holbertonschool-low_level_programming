@@ -1,5 +1,19 @@
 #include "main.h"
 
+/**
+ * testIfPalindrom - check the code
+ *
+ * Description: print
+ *
+ * @first: first char of string
+ *
+ * @last: last char of string
+ *
+ * @string: string
+ *
+ * Return: Always 0.
+ */
+
 int testIfPalindrom(int first, int last, char *string)
 {
 	if (first >= last)
@@ -10,6 +24,16 @@ int testIfPalindrom(int first, int last, char *string)
 		return (testIfPalindrom(first + 1, last - 1, string));
 }
 
+/**
+ * lengthString - searches for the length of the string
+ *
+ * Description: print
+ *
+ * @s: input string
+ *
+ * Return: Always 0.
+ */
+
 int lengthString(char *s)
 {
 	if (s[0] == '\0')
@@ -18,7 +42,7 @@ int lengthString(char *s)
 }
 
 /**
- * _puts_recursion - check the code
+ * is_palindrome - check the code
  *
  * Description: print
  *
