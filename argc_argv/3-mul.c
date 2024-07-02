@@ -20,13 +20,14 @@ int main(int argc, char **argv)
 	int sum;
 
 	(void) argc;
-	if ((atoi(argv[1]) > 0) || (atoi(argv[1]) <= 0))
-		if ((atoi(argv[2]) > 0) || (atoi(argv[2]) <= 0))
-		{
-			sum = atoi(argv[1]) * atoi(argv[2]);
-			printf("%d\n", sum);
-			return (0);
-		}
+	if (argc > 2)
+		if ((atoi(argv[1]) > 0) || (atoi(argv[1]) <= 0))
+			if ((atoi(argv[2]) > 0) || (atoi(argv[2]) <= 0))
+			{
+				sum = atoi(argv[1]) * atoi(argv[2]);
+				printf("%d\n", sum);
+				return (0);
+			}
 	printf("Error");
 	return (1);
 }
