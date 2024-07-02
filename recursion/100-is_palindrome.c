@@ -1,20 +1,20 @@
 #include "main.h"
 
-char *reverse_string(char *string)
+int testIfPalindrom(int first, int last, char *string)
 {
-	if (string[0] == '\0')
-	{
-		return (string);
-	}
-	return (reverse_string(string + 1) + string[0]);
+	if (first >= last)
+		return (1);
+	else if (string[first] != string[last])
+		return (0);
+	else
+		return (testIfPalindrom(first + 1, last - 1, string));
 }
 
-int testIfPalindrom(char *str, char *empty)
+int lengthString(char *s)
 {
-	empty = reverse_string(str);
-	if (empty == str)
-		return (1);
-	return (0);
+	if (s[0] == '\0')
+		return (0);
+	return (1 + lengthString(s + 1);
 }
 
 /**
@@ -29,7 +29,8 @@ int testIfPalindrom(char *str, char *empty)
 
 int is_palindrome(char *s)
 {
-	if (testIfPalindrom(s, s) == 1)
-		return (1);
-	return (0);
+	int i;
+
+	i = lengthString(s) - 1;
+	return (testIfPalindrom(0, i, s));
 }
