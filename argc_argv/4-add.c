@@ -18,8 +18,9 @@
 int main(int argc, char **argv)
 {
 	int sum = 0, i, j;
-	char argument;
+	char *argument;
 
+	argument = &argv;
 	if (argc > 2)
 	{
 		for (i = 1 ; i < argc ; i++)
