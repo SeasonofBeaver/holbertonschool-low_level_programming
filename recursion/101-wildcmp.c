@@ -23,7 +23,7 @@ int isIdentical(char *String1, char *String2)
 	else if (String1[0] != String2[0])
 		return (0);
 	else
-		return (isIdentical(String1 + 1, String2 + 1);
+		return (isIdentical(String1 + 1, String2 + 1));
 }
 
 /**
@@ -62,5 +62,5 @@ int wildcmp(char *s1, char *s2)
 	i = lengthString(s1) - 1;
 	j = lengthString(s2) - 1;
 
-	return (isIdentical(i, j, s1, s2)); 
+	return (isIdentical(s1, s2)); 
 }
