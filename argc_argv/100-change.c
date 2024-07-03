@@ -17,7 +17,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, cents;
+	int i, cents, hold;
 
 	i = 0;
 	if (argc != 2)
@@ -30,15 +30,21 @@ int main(int argc, char *argv[])
 	else
 	{
 		cents = atoi(argv[1]);
+		while (cents > 100)
+		{
+			hold = cents / 100;
+			i = hold * 4;
+			cents -= hold * 100;
+		}
 		while (cents > 0)
 		{
-			if (cents > 25)
+			if (cents >= 25)
 				cents -= 25;
-			else if (cents > 10)
+			else if (cents >= 10)
 				cents -= 10;
-			else if (cents > 5)
+			else if (cents >= 5)
 				cents -= 5;
-			else if (cents > 2)
+			else if (cents >= 2)
 				cents -= 2;
 			else
 				cents -= 1;
