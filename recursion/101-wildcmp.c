@@ -5,10 +5,6 @@
  *
  * Description: print
  *
- * @lenFirst: length string 1
- *
- * @lenSecond: length string 2
- *
  * @String1: string 1
  *
  * @String2: string 2
