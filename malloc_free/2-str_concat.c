@@ -24,6 +24,10 @@ char *str_concat(char *s1, char *s2)
 	for (k = 0 ; s2[k] != '\0' ; k++)
 	;
 	k++;
+	if (s1 = NULL)
+		j = 0;
+	if (s2 = NULL)
+		k = 0;
 	str = malloc(j + k);
 	if (str == NULL)
 		return (NULL);
