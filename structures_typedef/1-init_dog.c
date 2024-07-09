@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
-#include <dog.h>
+#include "dog.h"
 
 /**
  * init_dog - begining
