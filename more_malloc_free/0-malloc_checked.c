@@ -16,10 +16,10 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *str;
+	int *var;
 
-	str = malloc(sizeof(char) * b);
-	if (str == NULL)
-		return (98);
+	var = malloc(sizeof(int) * b);
+	if (var == NULL)
+		exit(98);
 	return (str);
 }
