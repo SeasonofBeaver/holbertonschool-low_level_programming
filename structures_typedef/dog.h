@@ -1,5 +1,5 @@
-#ifndef dog.h
-#define dog.h
+#ifndef dog_h
+#define dog_h
 
 /**
  * struct dog - doggos
@@ -20,4 +20,4 @@ struct dog
 	char *owner;
 };
 
-#endif /* dog.h */
+#endif /* dog_h */
