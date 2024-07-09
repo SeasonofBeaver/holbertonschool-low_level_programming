@@ -21,5 +21,5 @@ void *malloc_checked(unsigned int b)
 	var = malloc(sizeof(int) * b);
 	if (var == NULL)
 		exit(98);
-	return (str);
+	return (var);
 }
