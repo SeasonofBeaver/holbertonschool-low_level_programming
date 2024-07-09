@@ -3,22 +3,20 @@
 #include <stdlib.h>
 
 /**
- * create_array - begining
+ * malloc_checked - begining
  *
  * Description: print if negative or positive
  *
- * @size: size of array
- *
- * @c: character
+ * @b: size to allocate
  *
  * Return: 0 ends the program
  */
 
 void *malloc_checked(unsigned int b)
 {
-	int *var;
+	char *var;
 
-	var = malloc(sizeof(int) * b);
+	var = malloc(sizeof(char) * b);
 	if (var == NULL)
 		exit(98);
 	return (var);
