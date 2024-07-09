@@ -1,3 +1,6 @@
+#ifndef dog.h
+#define dog.h
+
 /**
  * struct dog - doggos
  *
@@ -16,3 +19,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif /* dog.h */
