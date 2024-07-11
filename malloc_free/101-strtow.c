@@ -25,6 +25,7 @@ int wordcounter(char *s)
 		else if (s[i] == ' ')
 			stillWord = 0;
 	}
+	return (words);
 }
 
 /**
