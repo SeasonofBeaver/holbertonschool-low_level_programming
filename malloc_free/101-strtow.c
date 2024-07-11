@@ -17,26 +17,26 @@ char **strtow(char *str)
 	int i, j = 0, k, l, m, words = 0, length, stillWord = 0;
 	char **array;
 
-	if ((str == NULL) || (str == ""))
+	if (str == NULL)
 		return (NULL);
 	for (i = 0 ; str[i] ; i++)
 	{
-		if ((str[i] != " ") && (stillWord == 0))
+		if ((str[i] != ' ') && (stillWord == 0))
 		{
 			stillWord = 1;
 			words++;
 		}
-		else if (str[i] == " ")
+		else if (str[i] == ' ')
 			stillWord = 0;
 	}
-	array = (char **)malloc(sizeof(char) * words);
+	array = (char **)malloc(sizeof(char *) * words);
 	if (array == NULL)
 		return (NULL);
 	for (i = 0 ; i < words ; i++)
 	{
-		while (str[j] == " ")
+		while (str[j] == ' ')
 			j++;
-		for (length = 0, m = j ; str[j] != " " ; m++, length++)
+		for (length = 0, m = j ; str[j] != ' ' ; m++, length++)
 		;
 		array[i] = malloc(sizeof(char) * length);
 		if (array[i] == NULL)
