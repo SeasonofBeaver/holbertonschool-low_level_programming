@@ -48,6 +48,7 @@ char **strtow(char *str)
 		}
 		for (k = 0 ; k < length ; k++, j++)
 			array[i][k] = str[j];
+		array[i][k] = '\0';
 	}
 	return (array);
 }
