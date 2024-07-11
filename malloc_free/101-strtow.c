@@ -3,6 +3,31 @@
 #include <stdlib.h>
 
 /**
+ * wordcounter - beginning
+ *
+ * @s: string
+ *
+ * Return: wordcount
+ */
+
+
+int wordcounter(char *s)
+{
+	int stillWord = 0, i, words = 0;
+
+	for (i = 0 ; str[i] ; i++)
+	{
+		if ((str[i] != ' ') && (stillWord == 0))
+		{
+			stillWord = 1;
+			words++;
+		}
+		else if (str[i] == ' ')
+			stillWord = 0;
+	}
+}
+
+/**
  * strtow - begining
  *
  * Description: print if negative or positive
@@ -14,26 +39,18 @@
 
 char **strtow(char *str)
 {
-	int i, j = 0, k, l, m, words = 0, length, stillWord = 0;
+	int i, j = 0, k, l, m, words, length;
 	char **array;
 
 	if ((str == NULL) || (str[0] == '\0'))
 		return (NULL);
-	for (i = 0 ; str[i] ; i++)
-	{
-		if ((str[i] != ' ') && (stillWord == 0))
-		{
-			stillWord = 1;
-			words++;
-		}
-		else if (str[i] == ' ')
-			stillWord = 0;
-	}
+	words = wordcounter(str);
 	if (words == 0)
 		return (NULL);
 	array = (char **)malloc(sizeof(char *) * (words + 1));
 	if (array == NULL)
 		return (NULL);
+	array[words] = NULL;
 	for (i = 0 ; i < words ; i++)
 	{
 		while (str[j] == ' ')
@@ -53,6 +70,5 @@ char **strtow(char *str)
 			array[i][k] = str[j];
 		array[i][k] = '\0';
 	}
-	array[i] = NULL;
 	return (array);
 }
