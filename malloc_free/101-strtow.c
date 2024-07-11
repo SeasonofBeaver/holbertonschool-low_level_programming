@@ -15,14 +15,14 @@ int wordcounter(char *s)
 {
 	int stillWord = 0, i, words = 0;
 
-	for (i = 0 ; str[i] ; i++)
+	for (i = 0 ; s[i] ; i++)
 	{
-		if ((str[i] != ' ') && (stillWord == 0))
+		if ((s[i] != ' ') && (stillWord == 0))
 		{
 			stillWord = 1;
 			words++;
 		}
-		else if (str[i] == ' ')
+		else if (s[i] == ' ')
 			stillWord = 0;
 	}
 }
