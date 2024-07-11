@@ -47,7 +47,7 @@ char **strtow(char *str)
 	if ((str == NULL) || (str[0] == '\0'))
 		return (NULL);
 	words = wordcounter(str);
-	if (words == 0)
+	if (words == 1)
 		return (NULL);
 	array = (char **)malloc(sizeof(char *) * words);
 	if (array == NULL)
