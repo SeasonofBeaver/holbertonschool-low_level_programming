@@ -29,7 +29,7 @@ char **strtow(char *str)
 		else if (str[i] == ' ')
 			stillWord = 0;
 	}
-	array = (char **)malloc(sizeof(char *) * words);
+	array = (char **)malloc(sizeof(char *) * (words + 1));
 	if (array == NULL)
 		return (NULL);
 	for (i = 0 ; i < words ; i++)
@@ -50,5 +50,6 @@ char **strtow(char *str)
 			array[i][k] = str[j];
 		array[i][k] = '\0';
 	}
+	array[i] = NULL;
 	return (array);
 }
