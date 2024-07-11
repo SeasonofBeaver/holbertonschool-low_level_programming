@@ -25,6 +25,7 @@ int wordcounter(char *s)
 		else if (s[i] == ' ')
 			stillWord = 0;
 	}
+	words++;
 	return (words);
 }
 
@@ -48,22 +49,24 @@ char **strtow(char *str)
 	words = wordcounter(str);
 	if (words == 0)
 		return (NULL);
-	array = (char **)malloc(sizeof(char *) * (words + 1));
+	array = (char **)malloc(sizeof(char *) * words);
 	if (array == NULL)
 		return (NULL);
-	array[words] = NULL;
-	for (i = 0 ; i < words ; i++)
+	array[words - 1] = NULL;
+	for (i = 0 ; i < words - 1 ; i++)
 	{
 		while (str[j] == ' ')
 			j++;
 		for (length = 0, m = j ; str[m] != ' ' ; m++, length++)
 		;
-		array[i] = malloc(sizeof(char) * (length + 1));
+		length++;
+		array[i] = malloc(sizeof(char) * length);
+		length--;
 		if (array[i] == NULL)
 		{
 			for (l = 0 ; l < i ; l++)
 				free(array[l]);
-			free(array[words]);
+			free(array[words - 1]);
 			free(array);
 			return (NULL);
 		}
