@@ -2,6 +2,16 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+/**
+ * printError - check the code
+ *
+ * Description: print
+ *
+ * @str: input
+ *
+ * Return: Always 0.
+ */
+
 void printError(char *str)
 {
 	int i;
@@ -11,17 +21,37 @@ void printError(char *str)
 	_putchar('\n');
 }
 
-int get_int_len (int value)
-{	
+/**
+ * get_int_len - check the code
+ *
+ * Description: print
+ *
+ * @value: input
+ *
+ * Return: Always 0.
+ */
+
+int get_int_len(int value)
+{
 	int l = 1;
-	
+
 	while (value > 9)
 	{
 		l++;
-		value/=10;
+		value /= 10;
 	}
-	return l;
+	return (l);
 }
+
+/**
+ * printSum - check the code
+ *
+ * Description: print
+ *
+ * @num: input
+ *
+ * Return: Always 0.
+ */
 
 void printSum(int num)
 {
@@ -36,6 +66,18 @@ void printSum(int num)
 	}
 	_putchar('\n');
 }
+
+/**
+ * multiply - check the code
+ *
+ * Description: print
+ *
+ * @num1: input
+ *
+ * @num2: input
+ *
+ * Return: Always 0.
+ */
 
 void multiply(int num1, int num2)
 {
@@ -97,7 +139,7 @@ int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 	int i, j, onlyNum = 1, num1, num2;
-	
+
 	if (argc != 3)
 	{
 		printError("Error");
