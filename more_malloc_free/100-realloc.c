@@ -3,6 +3,27 @@
 #include <stdlib.h>
 
 /**
+ * _memcpy - copies memory area
+ *
+ * @dest: destination string
+ *
+ * @src: source string
+ *
+ * @n: number of bytes to be copied
+ *
+ * Return: pointer to dest
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	char *ptr = dest;
+
+	while (n--)
+		*dest++ = *src++;
+	return (ptr);
+}
+
+/**
  * _realloc - begining
  *
  * Description: print if negative or positive
@@ -30,28 +51,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	pointer = malloc(new_size);
 	if (pointer == NULL)
 		return (NULL);
-	_memcpy(pointer, ptr, oldsize)
+	_memcpy(pointer, ptr, old_size);
 	free(ptr);
 	return (pointer);
-}
-
-/**
- * _memcpy - copies memory area
- *
- * @dest: destination string
- *
- * @src: source string
- *
- * @n: number of bytes to be copied
- *
- * Return: pointer to dest
- */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	char *ptr = dest;
-
-	while (n--)
-		*dest++ = *src++;
-	return (ptr);
 }
