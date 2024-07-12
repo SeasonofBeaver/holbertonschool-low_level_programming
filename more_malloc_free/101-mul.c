@@ -8,7 +8,7 @@ void printError(char *str)
 
 	for (i = 0 ; str[i] ; i++)
 		_putchar(str[i]);
-	_putchar("\n");
+	_putchar('\n');
 }
 
 int get_int_len (int value)
@@ -34,7 +34,7 @@ void printSum(int num)
 		prnt = (num / i) % 10;
 		_putchar(prnt + '0');
 	}
-	_putchar("\n");
+	_putchar('\n');
 }
 
 void multiply(int num1, int num2)
@@ -100,7 +100,7 @@ int main(int argc, char *argv[])
 	
 	if (argc != 3)
 	{
-		printError;
+		printError("Error");
 		exit(98);
 	}
 	for (j = 1 ; j <= 2 ; j++)
@@ -113,7 +113,7 @@ int main(int argc, char *argv[])
 		}
 	if (onlyNum == 0)
 	{
-		printError;
+		printError("Error");
 		exit(98);
 	}
 	num1 = _atoi(argv[1]);
