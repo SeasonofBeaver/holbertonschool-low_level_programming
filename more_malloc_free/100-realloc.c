@@ -18,6 +18,8 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	void *pointer = NULL;
+
 	if (new_size == old_size)
 		return (ptr);
 	if ((new_size == 0) && (ptr != NULL))
@@ -25,12 +27,31 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	if (new_size != old_size)
-	{
-		ptr = malloc(new_size);
-		if (ptr == NULL)
-			return (NULL);
-		return (ptr);
-	}
+	pointer = malloc(new_size);
+	if (pointer == NULL)
+		return (NULL);
+	_memcpy(pointer, ptr, oldsize)
+	free(ptr);
+	return (pointer);
+}
+
+/**
+ * _memcpy - copies memory area
+ *
+ * @dest: destination string
+ *
+ * @src: source string
+ *
+ * @n: number of bytes to be copied
+ *
+ * Return: pointer to dest
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	char *ptr = dest;
+
+	while (n--)
+		*dest++ = *src++;
 	return (ptr);
 }
