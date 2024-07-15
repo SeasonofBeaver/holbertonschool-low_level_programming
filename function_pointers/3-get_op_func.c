@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "3-calc.h"
 
 /**
@@ -24,8 +25,8 @@ int (*get_op_func(char *s))(int, int)
 
 	while (i < 6)
 	{
-		if (ops[i][0] == s)
-			return (ops[i][1]);
+		if (ops[i] == s)
+			return (ops[i]);
 		i++;
 	}
 	return (NULL);
