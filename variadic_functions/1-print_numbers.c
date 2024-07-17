@@ -24,5 +24,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if ((i + 1 != n) && (seperator != NULL))
 			printf("%s", seperator);
 	}
+	va_end(pointer);
 	printf("\n");
 }
