@@ -2,6 +2,7 @@
 #define main_h
 
 #include <stdarg.h>
+#include <stdio.h>
 
 int _putchar(char);
 
