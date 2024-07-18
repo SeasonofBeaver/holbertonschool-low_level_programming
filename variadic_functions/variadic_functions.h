@@ -14,4 +14,12 @@ void print_strings(const char *separator, const unsigned int n, ...);
 
 void print_all(const char * const format, ...);
 
+struct formats
+{
+	char *type;
+	void (*function)(va_list);
+};
+
+typedef struct formats search;
+
 #endif /* main_h */
