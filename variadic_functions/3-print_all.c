@@ -1,6 +1,55 @@
 #include "variadic_functions.h"
 
 /**
+ * printChar - beginning
+ *
+ * @pointer: input to be printed
+ */
+
+void printChar(va_list pointer)
+{
+	printf("%c", va_arg(pointer, int));
+}
+
+/**
+ * printInt - beginning
+ *
+ * @pointer: input
+ */
+
+void printInt(va_list pointer)
+{
+	printf("%i", va_arg(pointer, int));
+}
+
+/**
+ * printFloat - beginning
+ *
+ * @pointer: input
+ */
+
+void printFloat(va_list pointer)
+{
+	printf("%f", va_arg(pointer, double));
+}
+
+/**
+ * printString - beginning
+ *
+ * @pointer: input
+ */
+
+void printString(va_list pointer)
+{
+	char *str;
+
+	str = va_arg(pointer, char *);
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
+}
+
+/**
  * print_all - begining
  *
  * Description: print if negative or positive
@@ -13,38 +62,33 @@
 void print_all(const char * const format, ...)
 {
 	va_list pointer;
-	char  *str, *sep = "";
-	unsigned int i = 0;
+	char  *sep = "";
+	unsigned int i = 0, j = 0;
+
+	search list[] = {
+		{"c", printChar},
+		{"i", printInt},
+		{"f", printFloat},
+		{"s", printString},
+		{'\0', NULL}
+	};
 
 	va_start(pointer, format);
-	if (format)
+
+	while ((format != NULL) && (format[i] != '\0'))
 	{
-		while (format[i])
+		while (j < 4)
 		{
-			switch (format[i])
+			if (*list[j].type == format[i])
 			{
-				case 'c':
-					printf("%s%c", sep, va_arg(pointer, int));
-					break;
-				case 'i':
-					printf("%s%i", sep, va_arg(pointer, int));
-					break;
-				case 'f':
-					printf("%s%f", sep, va_arg(pointer, double));
-					break;
-				case 's':
-					str = va_arg(pointer, char *);
-					if (str == NULL)
-						str = "(nil)";
-					printf("%s%s", sep, str);
-					break;
-				default:
-					i++;
-					continue;
+				printf("%s", sep);
+				list[j].function(pointer);
+				sep = ", ";
 			}
-			sep = ", ";
-			i++;
+			j++;
 		}
+		i++;
+		j = 0;
 	}
 	printf("\n");
 	va_end(pointer);
