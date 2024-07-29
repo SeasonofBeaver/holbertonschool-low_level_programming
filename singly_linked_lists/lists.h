@@ -7,6 +7,19 @@
 
 typedef struct node *nodePtr;
 
+
+/**
+ * struct node - linked list
+ *
+ * @str: string
+ *
+ * @len: length of string
+ *
+ * @next: pointer to next list element
+ *
+ * Description: structure for linked list
+ */
+
 struct node
 {
 	char *str;
