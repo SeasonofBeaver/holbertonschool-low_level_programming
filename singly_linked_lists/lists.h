@@ -1,6 +1,10 @@
 #ifndef main_h
 #define main_h
 
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 typedef struct node *nodePtr;
 
 struct node {
