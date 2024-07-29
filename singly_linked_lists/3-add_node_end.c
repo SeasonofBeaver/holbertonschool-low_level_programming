@@ -59,6 +59,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	while (tail->next)
 		tail = tail->next;
-	*tail = temp;
-	return (*tail);
+	tail = temp;
+	return (tail);
 }
