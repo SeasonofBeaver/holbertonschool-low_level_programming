@@ -35,7 +35,7 @@ int _strlen(char *s)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
-	list_t *tail = *head
+	list_t *tail = *head;
 	char *string;
 
 	if (!str)
