@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * print_list - begining
+ * list_len - begining
  *
- * Description: print list
+ * Description: get length of list
  *
  * @h: list input
  *
