@@ -7,7 +7,8 @@
 
 typedef struct node *nodePtr;
 
-struct node {
+struct node
+{
 	char *str;
 	int len;
 	nodePtr next;
