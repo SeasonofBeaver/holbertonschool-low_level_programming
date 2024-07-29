@@ -21,11 +21,13 @@ int _strlen(char *s)
 }
 
 /**
- * print_list - begining
+ * add_node - begining
  *
  * Description: print list
  *
- * @h: list input
+ * @head: list input
+ *
+ * @str: string to put in
  *
  * Return: size of list
  */
