@@ -11,7 +11,9 @@ struct node {
 	char *string;
 	int length;
 	nodePtr next;
-} list_t;
+};
+
+typedef struct node list_t;
 
 int _putchar(char a);
 
