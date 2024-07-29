@@ -8,8 +8,8 @@
 typedef struct node *nodePtr;
 
 struct node {
-	char *string;
-	int length;
+	char *str;
+	int len;
 	nodePtr next;
 };
 
