@@ -1,15 +1,15 @@
 #include "lists.h"
 
 /**
- * add_node - begining
+ * add_dnodeint - begining
  *
- * Description: print list
+ * Description: add element at beginning
  *
  * @head: list input
  *
- * @str: string to put in
+ * @n: number to put in
  *
- * Return: size of list
+ * Return: list head
  */
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
