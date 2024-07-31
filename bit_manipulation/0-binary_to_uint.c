@@ -12,7 +12,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0, len, multiply = 1;
+	unsigned int decimal = 0, len, multiply = 1, convNum;
 
 	if (!b)
 		return (0);
@@ -20,9 +20,10 @@ unsigned int binary_to_uint(const char *b)
 	;
 	for (; len > 0 ; len--)
 	{
-		if (atoi(b[len]) != 1 || atoi(b[len]) != 0)
+		convNum = b[len] - '0';
+		if (convNum != 1 || convNum != 0)
 			return (0);
-		decimal += multiply * atoi(b[len]);
+		decimal += multiply * convNum;
 		multilpy *= 2;
 	}
 	return (decimal);
