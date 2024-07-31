@@ -24,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 		if (convNum != 1 || convNum != 0)
 			return (0);
 		decimal += multiply * convNum;
-		multilpy *= 2;
+		multiply *= 2;
 	}
 	return (decimal);
 }
