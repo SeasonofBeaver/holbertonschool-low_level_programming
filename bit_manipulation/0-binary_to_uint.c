@@ -12,16 +12,17 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0, len, multiply = 1, convNum;
+	unsigned int decimal = 0, multiply = 1, convNum;
+	int len;
 
 	if (!b)
 		return (0);
 	for (len = 0 ; b[len] != '\0' ; len++)
 	;
-	for (; len > 0 ; len--)
+	for (len-- ; len > 0 ; len--)
 	{
 		convNum = b[len] - '0';
-		if (convNum != 1 || convNum != 0)
+		if (convNum != 1 && convNum != 0)
 			return (0);
 		decimal += multiply * convNum;
 		multiply *= 2;
