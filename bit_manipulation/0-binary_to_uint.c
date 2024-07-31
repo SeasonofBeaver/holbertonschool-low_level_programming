@@ -19,7 +19,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	for (len = 0 ; b[len] != '\0' ; len++)
 	;
-	for (len-- ; len > 0 ; len--)
+	for (len-- ; len >= 0 ; len--)
 	{
 		convNum = b[len] - '0';
 		if (convNum != 1 && convNum != 0)
