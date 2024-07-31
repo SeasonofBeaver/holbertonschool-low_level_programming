@@ -20,7 +20,7 @@ void print_binary(unsigned long int n)
 	}
 	for (len = 0 ; devider <= n ; len++, devider *= 2)
 	;
-	for (; len > 0 ; len--)
+	for (; len >= 0 ; len--)
 	{
 		devider = 1;
 		while ((devider * 2) <= n)
