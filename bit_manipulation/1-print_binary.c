@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		_putchar('0')
+		_putchar('0');
 		return;
 	}
 	for (len = 0 ; devider <= n ; len++, devider *= 2)
@@ -26,7 +26,7 @@ void print_binary(unsigned long int n)
 			devider *= 2;
 		if (n == 0 && prevDiv == 2)
 		{
-			_putchar('0')
+			_putchar('0');
 			return;
 		}
 		if ((prevDiv == devider * 2) || prevDiv == 0)
