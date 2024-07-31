@@ -25,6 +25,8 @@ void print_binary(unsigned long int n)
 		devider = 1;
 		while ((devider * 2) <= n)
 			devider *= 2;
+		if (n == 0 && prevDiv == 1)
+			return;
 		if (n == 0 && prevDiv == 2)
 		{
 			_putchar('0');
