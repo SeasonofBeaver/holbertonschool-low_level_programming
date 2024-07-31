@@ -10,7 +10,8 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int devider = 1, prevDiv = 0, len, hold;
+	unsigned long int devider = 1, prevDiv = 0, hold;
+	int len;
 
 	if (n == 0)
 	{
