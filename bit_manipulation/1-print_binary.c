@@ -44,6 +44,7 @@ void print_binary(unsigned long int n)
 				devider *= 2;
 				len--;
 			}
+			len++;
 			devider = hold * 2;
 		}
 		prevDiv = devider;
