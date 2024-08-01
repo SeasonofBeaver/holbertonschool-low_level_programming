@@ -12,17 +12,31 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	unsigned long int n, fd;
-	char buffer[letters];
+	int fd;
+	ssize_t lenRd, lenWr;
+	char *buffer;
 
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd == 0)
+	if (fd == -1)
 		return (0);
-	n = fread(fd, buffer, letters);
-	if (n != letters)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+	{
+		close(fd);
 		return (0);
-	fwrite(1, buffer, letters);
-	return (n);
+	}
+	lenRd = read(fd, buffer, letters);
+	close(fd);
+	if (lenRd == -1)
+	{
+		free(buffer);
+		return (0);
+	}
+	lenWr = write(STDOUT_POSIX, buffer, letters);
+	free(buffer);
+	if (lenWr != lenRd)
+		return (0);
+	return (lenWr);
 }
