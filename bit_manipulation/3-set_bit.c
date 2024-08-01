@@ -14,17 +14,11 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int result, num, multiply, add = 1, i;
+	unsigned long int setting;
 
 	if (index > (sizeof(unsigned long int) * 8 - 1))
 		return (-1);
-	num = n
-	multiply = 1 << index;
-	result = num & multiply;
-	if (result == multiply)
-		return (-1);
-	for (i = 0 ; i < index ; add *= 2, i++)
-	;
-	n += add;
+	setting = 1 << index;
+	*n = *n | setting;
 	return (1);
 }
