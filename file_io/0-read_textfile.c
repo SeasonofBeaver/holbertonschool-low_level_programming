@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * red_textfile - Read the Code
+ * read_textfile - Read the Code
  *
  * Describtion: reads file and prints n letters
  *
