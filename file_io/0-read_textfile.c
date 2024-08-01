@@ -12,17 +12,17 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int n, fd;
-	char buffer[letters + 1];
+	unsigned long int n, fd;
+	char buffer[letters];
 
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd == NULL)
+	if (fd == 0)
 		return (0);
-	n = read(fd, buffer, letters);
+	n = fread(fd, buffer, letters);
 	if (n != letters)
 		return (0);
-	write(1, buffer, letters);
+	fwrite(1, buffer, letters);
 	return (n);
 }
