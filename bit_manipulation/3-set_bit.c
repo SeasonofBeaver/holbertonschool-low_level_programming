@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * get_bit - Read the Code
+ * set_bit - Read the Code
  *
- * Describtion: get value of index in bin-num
+ * Describtion: set value at index to 1
  *
  * @n: decimal number
  *
  * @index: index of to be returned value
  *
- * Return: value of index
+ * Return: 1 if done -1 if not
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
