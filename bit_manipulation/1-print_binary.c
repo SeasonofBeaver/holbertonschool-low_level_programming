@@ -10,7 +10,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int devider = 1, prevDiv = 0, hold;
+	unsigned long int devider = 1, prevDiv = 0, hold, test = 0;
 	int len;
 
 	if (n == 0)
@@ -19,7 +19,19 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	for (len = 0 ; devider <= n ; len++, devider *= 2)
-	;
+	{
+		if (test > devider)
+		{
+			len = 64;
+			while (len > 0)
+			{
+				_putchar('1');
+				len--;
+			}
+			return;
+		}
+		test = devider;
+	}
 	for (; len >= 0 ; len--)
 	{
 		devider = 1;
