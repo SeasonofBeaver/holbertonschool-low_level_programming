@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * binary_to_uint - Read the Code
+ * red_textfile - Read the Code
  *
- * Describtion: converts bin to decimal
+ * Describtion: reads file and prints n letters
  *
- * @b: binary number
+ * @filename: filename to be opened
  *
- * Return: decimal number
+ * @letters: number of lettes to be printed
+ *
+ * Return: length of accually printed letters
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
