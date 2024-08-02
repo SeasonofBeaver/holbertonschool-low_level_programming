@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- * check97 - correct number of arguments
+ * check97 - checks for the correct number of arguments
  *
  * @argc: number of arguments
  */
-
 void check97(int argc)
 {
 	if (argc != 3)
@@ -16,7 +15,7 @@ void check97(int argc)
 }
 
 /**
- * check98 - file_from exists and can be read
+ * check98 - checks that file_from exists and can be read
  *
  * @check: checks if true of false
  *
@@ -41,9 +40,9 @@ void check98(ssize_t check, char *file, int fd_from, int fd_to)
 }
 
 /**
- * check99 - file_to was created and can be written to
+ * check99 - checks that file_to was created and/or can be written to
  *
- * @check: true of false
+ * @check: checks if true of false
  *
  * @file: file_to name
  *
@@ -66,13 +65,12 @@ void check99(ssize_t check, char *file, int fd_from, int fd_to)
 }
 
 /**
- * check100 - file descriptors were closed properly
+ * check100 - checks that file descriptors were closed properly
  *
- * @check: true or false
+ * @check: checks if true or false
  *
  * @fd: file descriptor
  */
-
 void check100(int check, int fd)
 {
 	if (check == -1)
@@ -81,15 +79,12 @@ void check100(int check, int fd)
 		exit(100);
 	}
 }
-
 /**
- * main - copies the content of a file to another
+ * main - copies the content of a file to another file.
  *
- * @argc: number of arguments
+ * @argc: number of arguments passed
  *
- * @argv: array of arguments
- *
- * Return: 0 if success
+ * @argv: array of pointers to the arguments
  */
 
 int main(int argc, char *argv[])
