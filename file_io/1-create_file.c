@@ -24,7 +24,7 @@ int _strlen(char *s)
  * create_file - creates a file
  *
  * @filename: name of the file to create
- * 
+ *
  * @text_content: string to write to the file
  *
  * Return: 1 on success, -1 on failure
