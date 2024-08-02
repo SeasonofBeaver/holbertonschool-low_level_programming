@@ -60,7 +60,10 @@ void check99(ssize_t check, char *file, int fd_from, int fd_to)
 		if (fd_from != -1)
 			close(fd_from);
 		if (fd_to != -1)
+		{
 			close(fd_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		}
 		exit(99);
 	}
 }
@@ -101,7 +104,7 @@ int main(int argc, char *argv[])
 	check97(argc);
 	fd_from = open(argv[1], O_RDONLY);
 	check98(fd_from, argv[1], -1, -1);
-	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	check99(fd_to, argv[2], fd_from, -1);
 	lenRd = 1024;
 	while (lenRd == 1024)
