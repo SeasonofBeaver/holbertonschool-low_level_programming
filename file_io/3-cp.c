@@ -73,11 +73,11 @@ void check99(ssize_t check, char *file, int fd_from, int fd_to)
  * @fd: file descriptor
  */
 
-void check100(int check, int fd)
+void check100(int check)
 {
 	if (check == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", argv[2]);
 		exit(100);
 	}
 }
@@ -97,13 +97,11 @@ int main(int argc, char *argv[])
 	int fd_from, fd_to, close_from, close_to;
 	ssize_t lenRd, lenWr;
 	char buffer[1024];
-	mode_t file_perm;
 
 	check97(argc);
 	fd_from = open(argv[1], O_RDONLY);
 	check98(fd_from, argv[1], -1, -1);
-	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, file_perm);
+	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	check99(fd_to, argv[2], fd_from, -1);
 	lenRd = 1024;
 	while (lenRd == 1024)
@@ -117,7 +115,7 @@ int main(int argc, char *argv[])
 	}
 	close_to = close(fd_to);
 	close_from = close(fd_from);
-	check100(close_to, fd_to);
-	check100(close_from, fd_from);
+	check100(close_to);
+	check100(close_from);
 	return (0);
 }
