@@ -73,11 +73,11 @@ void check99(ssize_t check, char *file, int fd_from, int fd_to)
  * @fd: file descriptor
  */
 
-void check100(int check)
+void check100(int check, int fd)
 {
 	if (check == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
 	}
 	close_to = close(fd_to);
 	close_from = close(fd_from);
-	check100(close_to);
-	check100(close_from);
+	check100(close_to, fd_to);
+	check100(close_from, fd_from);
 	return (0);
 }
