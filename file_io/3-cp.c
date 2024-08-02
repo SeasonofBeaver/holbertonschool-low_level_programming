@@ -18,7 +18,7 @@ void check97(int argc)
 /**
  * check98 - file_from exists and can be read
  *
- * @check: checks if true of false
+ * @check: true of false
  *
  * @file: file_from name
  *
@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 	check97(argc);
 	fd_from = open(argv[1], O_RDONLY);
 	check98(fd_from, argv[1], -1, -1);
-	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
 	check99(fd_to, argv[2], fd_from, -1);
 	lenRd = 1024;
 	while (lenRd == 1024)
