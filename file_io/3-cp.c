@@ -60,10 +60,7 @@ void check99(ssize_t check, char *file, int fd_from, int fd_to)
 		if (fd_from != -1)
 			close(fd_from);
 		if (fd_to != -1)
-		{
 			close(fd_to);
-			dprintf(STDERR_FILENO, "Erro: Can't write to %s\n", file);
-		}
 		exit(99);
 	}
 }
